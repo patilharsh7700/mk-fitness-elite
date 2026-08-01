@@ -1,3 +1,14 @@
+import trainersImg from "@/assets/trainers.jpg";
+import equipmentImg from "@/assets/equipment.jpg";
+import yogaHallImg from "@/assets/yoga-hall.jpg";
+import strengthImg from "@/assets/strength-training.jpg";
+import cardioImg from "@/assets/cardio-zone.jpg";
+import functionalImg from "@/assets/functional-training.jpg";
+import personalTrainingImg from "@/assets/personal-training.jpg";
+import nutritionImg from "@/assets/nutrition-guidance.jpg";
+import friendlyImg from "@/assets/friendly-environment.jpg";
+import affordableImg from "@/assets/affordable-membership.jpg";
+
 export const BRAND = "M.K Fitness Club";
 
 export const PHONES = ["8698967644", "9689167644"];
@@ -15,17 +26,48 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
+// WHY_US with image imports from src/assets/
 export const WHY_US = [
-  "Certified Trainers",
-  "Modern Equipment",
-  "Separate Yoga Hall",
-  "Strength Training",
-  "Cardio Zone",
-  "Functional Training",
-  "Personal Training",
-  "Nutrition Guidance",
-  "Friendly Environment",
-  "Affordable Membership",
+  { 
+    title: "Certified Trainers",
+    image: trainersImg
+  },
+  { 
+    title: "Modern Equipment",
+    image: equipmentImg
+  },
+  { 
+    title: "Separate Yoga Hall",
+    image: yogaHallImg
+  },
+  { 
+    title: "Strength Training",
+    image: strengthImg
+  },
+  { 
+    title: "Cardio Zone",
+    image: cardioImg
+  },
+  { 
+    title: "Functional Training",
+    image: functionalImg
+  },
+  { 
+    title: "Personal Training",
+    image: personalTrainingImg
+  },
+  { 
+    title: "Nutrition Guidance",
+    image: nutritionImg
+  },
+  { 
+    title: "Friendly Environment",
+    image: friendlyImg
+  },
+  { 
+    title: "Affordable Membership",
+    image: affordableImg
+  },
 ];
 
 export const FEATURES = [
