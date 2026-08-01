@@ -15,17 +15,59 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
+// data/site.ts
+
 export const WHY_US = [
-  "Certified Trainers",
-  "Modern Equipment",
-  "Separate Yoga Hall",
-  "Strength Training",
-  "Cardio Zone",
-  "Functional Training",
-  "Personal Training",
-  "Nutrition Guidance",
-  "Friendly Environment",
-  "Affordable Membership",
+  {
+    title: "Certified Trainers",
+    description: "Expert guidance from certified professionals",
+    image: "/images/trainers.jpg" // Add your image paths
+  },
+  {
+    title: "Modern Equipment",
+    description: "State-of-the-art fitness equipment",
+    image: "/images/equipment.jpg"
+  },
+  {
+    title: "Separate Yoga Hall",
+    description: "Dedicated space for yoga and mobility",
+    image: "/images/yoga-hall.jpg"
+  },
+  {
+    title: "Strength Training",
+    description: "Full free-weight zone with racks and plates",
+    image: "/images/strength-training.jpg"
+  },
+  {
+    title: "Cardio Zone",
+    description: "Treadmills, cross trainers, bikes and rowers",
+    image: "/images/cardio-zone.jpg"
+  },
+  {
+    title: "Functional Training",
+    description: "Functional turf, ropes, kettlebells and sleds",
+    image: "/images/functional-training.jpg"
+  },
+  {
+    title: "Personal Training",
+    description: "One-on-one sessions with certified coaches",
+    image: "/images/personal-training.jpg"
+  },
+  {
+    title: "Nutrition Guidance",
+    description: "Personalised diet plans and nutrition advice",
+    image: "/images/nutrition-guidance.jpg"
+  },
+  {
+    title: "Friendly Environment",
+    description: "Join a motivating and supportive community",
+    image: "/images/friendly-environment.jpg"
+  },
+  {
+    title: "Affordable Membership",
+    description: "Premium facilities at budget-friendly rates",
+    image: "/images/affordable-membership.jpg"
+  },
 ];
 
 export const FEATURES = [
