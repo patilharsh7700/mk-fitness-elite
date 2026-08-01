@@ -18,6 +18,7 @@ export function About() {
         />
 
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
+          {/* Left side - Main Interior Image */}
           <div data-reveal="left" className="group relative overflow-hidden rounded-[2rem]">
             <img
               src={interior}
@@ -36,17 +37,33 @@ export function About() {
             </div>
           </div>
 
+          {/* Right side - Grid with images */}
           <div data-reveal="right" className="grid gap-3 sm:grid-cols-2">
             {WHY_US.map((item, i) => (
               <div
-                key={item}
-                className="glass flex items-center gap-3 rounded-2xl px-5 py-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
+                key={item.title}
+                className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 style={{ ["--reveal-delay" as string]: `${i * 40}ms` }}
               >
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
-                  <Check className="h-4 w-4" />
-                </span>
-                <span className="text-sm font-semibold">{item}</span>
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300" />
+                </div>
+                
+                {/* Content */}
+                <div className="relative flex items-center gap-3 px-5 py-4 min-h-[80px]">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary/20 backdrop-blur-sm text-primary">
+                    <Check className="h-4 w-4" />
+                  </span>
+                  <span className="text-sm font-semibold text-white drop-shadow-lg">
+                    {item.title}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -54,4 +71,4 @@ export function About() {
       </div>
     </section>
   );
-} 
+}
