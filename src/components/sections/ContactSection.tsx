@@ -10,15 +10,34 @@ const inputCls =
 export function ContactSection({ heading = true }: { heading?: boolean }) {
   const [sending, setSending] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
+    
     setSending(true);
-    setTimeout(() => {
+    
+    try {
+      // Formspree handles everything automatically
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        form.reset();
+        toast.success("Thanks! Our team will call you back shortly.");
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch (error) {
+      toast.error("Something went wrong. Please try again or call us directly.");
+    } finally {
       setSending(false);
-      form.reset();
-      toast.success("Thanks! Our team will call you back shortly.");
-    }, 700);
+    }
   };
 
   return (
@@ -37,7 +56,14 @@ export function ContactSection({ heading = true }: { heading?: boolean }) {
         )}
 
         <div className="mt-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <form data-reveal="left" onSubmit={onSubmit} className="glass grid gap-4 rounded-[2rem] p-8">
+          {/* ✅ JUST ADD THESE TWO ATTRIBUTES: action + method */}
+          <form 
+            data-reveal="left" 
+            onSubmit={onSubmit}
+            action="https://formspree.io/f/mnjekvba"  // ← Your Formspree URL
+            method="POST"                                   // ← Must be POST
+            className="glass grid gap-4 rounded-[2rem] p-8"
+          >
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="grid gap-2 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
                 Name
