@@ -1,5 +1,3 @@
-// data/site.ts
-
 export const BRAND = "M.K Fitness Club";
 
 export const PHONES = ["8698967644", "9689167644"];
