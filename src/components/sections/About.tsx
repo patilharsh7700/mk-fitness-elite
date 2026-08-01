@@ -54,4 +54,4 @@ export function About() {
       </div>
     </section>
   );
-} here i want to show images also for each section
+} 
