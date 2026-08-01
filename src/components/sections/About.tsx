@@ -3,6 +3,32 @@ import interior from "@/assets/interior.jpg";
 import { SectionHeading } from "@/components/site/ui-bits";
 import { WHY_US } from "@/data/site";
 
+// Import all images from src/assets/
+import trainersImg from "@/assets/trainers.jpg";
+import equipmentImg from "@/assets/equipment.jpg";
+import yogaHallImg from "@/assets/yoga-hall.jpg";
+import strengthImg from "@/assets/strength-training.jpg";
+import cardioImg from "@/assets/cardio-zone.jpg";
+import functionalImg from "@/assets/functional-training.jpg";
+import personalTrainingImg from "@/assets/personal-training.jpg";
+import nutritionImg from "@/assets/nutrition-guidance.jpg";
+import friendlyImg from "@/assets/friendly-environment.jpg";
+import affordableImg from "@/assets/affordable-membership.jpg";
+
+// Map each WHY_US item to its image
+const imageMap: Record<string, string> = {
+  "Certified Trainers": trainersImg,
+  "Modern Equipment": equipmentImg,
+  "Separate Yoga Hall": yogaHallImg,
+  "Strength Training": strengthImg,
+  "Cardio Zone": cardioImg,
+  "Functional Training": functionalImg,
+  "Personal Training": personalTrainingImg,
+  "Nutrition Guidance": nutritionImg,
+  "Friendly Environment": friendlyImg,
+  "Affordable Membership": affordableImg,
+};
+
 export function About() {
   return (
     <section className="relative py-24 lg:py-32">
@@ -18,7 +44,7 @@ export function About() {
         />
 
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
-          {/* Left side - Main Interior Image */}
+          {/* Left side - Main Image */}
           <div data-reveal="left" className="group relative overflow-hidden rounded-[2rem]">
             <img
               src={interior}
@@ -41,15 +67,15 @@ export function About() {
           <div data-reveal="right" className="grid gap-3 sm:grid-cols-2">
             {WHY_US.map((item, i) => (
               <div
-                key={item.title}
+                key={item}
                 className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 style={{ ["--reveal-delay" as string]: `${i * 40}ms` }}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img
-                    src={item.image}
-                    alt={item.title}
+                    src={imageMap[item]}
+                    alt={item}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all duration-300" />
@@ -61,7 +87,7 @@ export function About() {
                     <Check className="h-4 w-4" />
                   </span>
                   <span className="text-sm font-semibold text-white drop-shadow-lg">
-                    {item.title}
+                    {item}
                   </span>
                 </div>
               </div>
