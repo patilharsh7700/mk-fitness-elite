@@ -123,18 +123,15 @@ function Navbar() {
         </button>
       </nav>
 
-      {/* Improved Mobile Dropdown */}
       {open && (
-        <div className="mx-4 mt-3 rounded-3xl bg-background/95 backdrop-blur-xl shadow-2xl border border-white/10 xl:hidden">
-          <div className="grid gap-1 p-4">
+        <div className="glass mx-4 mt-3 rounded-3xl p-4 xl:hidden">
+          <div className="grid gap-1">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className={`rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-200 ${
-                  path === item.to 
-                    ? "bg-primary/20 text-primary" 
-                    : "text-foreground/90 hover:bg-white/5"
+                className={`rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-wide ${
+                  path === item.to ? "bg-primary/15 text-primary" : "text-foreground/85"
                 }`}
               >
                 {item.label}
@@ -142,7 +139,7 @@ function Navbar() {
             ))}
             <Link
               to="/join"
-              className="animated-gradient mt-2 rounded-xl px-4 py-3 text-center text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-lg shadow-primary/25"
+              className="animated-gradient mt-2 rounded-xl px-4 py-3 text-center text-sm font-bold uppercase tracking-wider text-primary-foreground"
             >
               Join Now
             </Link>
