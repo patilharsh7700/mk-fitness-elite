@@ -1,6 +1,16 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-import { Menu, X, Phone, MessageCircle, Instagram, Facebook, Youtube, MapPin, Clock } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  MessageCircle,
+  Instagram,
+  Facebook,
+  Youtube,
+  MapPin,
+  Clock,
+} from "lucide-react";
 import { BRAND, NAV, PHONES, WHATSAPP, BRANCHES } from "@/data/site";
 import { useScrollReveal } from "@/hooks/use-scroll-fx";
 
@@ -17,7 +27,10 @@ function ScrollProgress() {
   }, []);
   return (
     <div className="fixed inset-x-0 top-0 z-[60] h-[3px] bg-transparent">
-      <div className="animated-gradient h-full transition-[width] duration-150" style={{ width: `${p}%` }} />
+      <div
+        className="animated-gradient h-full transition-[width] duration-150"
+        style={{ width: `${p}%` }}
+      />
     </div>
   );
 }
@@ -64,19 +77,21 @@ function Navbar() {
       }`}
     >
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 lg:px-8">
-        <Link to="/" className="flex min-w-0 items-center gap-3">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-primary font-display text-2xl leading-none text-primary-foreground">
-            MK
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate font-display text-xl leading-none tracking-wide">
-              M.K FITNESS CLUB
-            </span>
-            <span className="block truncate text-[11px] tracking-[0.3em] text-muted-foreground">
-              PUNAWALE · MARUNJI
-            </span>
-          </span>
-        </Link>
+       <Link to="/" className="flex min-w-0 items-center gap-3">
+  <img
+    src="/src/assets/logo.png"
+    alt="MK Fitness Club Logo"
+    className="h-11 w-11 shrink-0 rounded-2xl object-cover"
+  />
+  <span className="min-w-0">
+    <span className="block truncate font-display text-xl leading-none tracking-wide">
+      M.K FITNESS CLUB
+    </span>
+    <span className="block truncate text-[11px] tracking-[0.3em] text-muted-foreground">
+      PUNAWALE · MARUNJI
+    </span>
+  </span>
+</Link>
 
         <div className="hidden items-center gap-1 xl:flex">
           {NAV.map((item) => (
