@@ -21,7 +21,7 @@ export const WHY_US = [
   {
     title: "Certified Trainers",
     description: "Expert guidance from certified professionals",
-    image: "/images/trainers.jpg" // Add your image paths
+    image: "/images/trainers.png" // Add your image paths
   },
   {
     title: "Modern Equipment",
