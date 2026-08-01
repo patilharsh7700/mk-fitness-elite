@@ -1,33 +1,9 @@
 import { Check } from "lucide-react";
-import interior from "@/assets/interior.jpg";
 import { SectionHeading } from "@/components/site/ui-bits";
 import { WHY_US } from "@/data/site";
 
-// Import all images from src/assets/
-import trainersImg from "@/assets/trainers.jpg";
-import equipmentImg from "@/assets/equipment.jpg";
-import yogaHallImg from "@/assets/yoga-hall.jpg";
-import strengthImg from "@/assets/strength-training.jpg";
-import cardioImg from "@/assets/cardio-zone.jpg";
-import functionalImg from "@/assets/functional-training.jpg";
-import personalTrainingImg from "@/assets/personal-training.jpg";
-import nutritionImg from "@/assets/nutrition-guidance.jpg";
-import friendlyImg from "@/assets/friendly-environment.jpg";
-import affordableImg from "@/assets/affordable-membership.jpg";
-
-// Map each WHY_US item to its image
-const imageMap: Record<string, string> = {
-  "Certified Trainers": trainersImg,
-  "Modern Equipment": equipmentImg,
-  "Separate Yoga Hall": yogaHallImg,
-  "Strength Training": strengthImg,
-  "Cardio Zone": cardioImg,
-  "Functional Training": functionalImg,
-  "Personal Training": personalTrainingImg,
-  "Nutrition Guidance": nutritionImg,
-  "Friendly Environment": friendlyImg,
-  "Affordable Membership": affordableImg,
-};
+// Import image from src/assets/
+import trainersImg from "@/assets/trainers.png";
 
 export function About() {
   return (
@@ -47,7 +23,7 @@ export function About() {
           {/* Left side - Main Image */}
           <div data-reveal="left" className="group relative overflow-hidden rounded-[2rem]">
             <img
-              src={interior}
+              src={trainersImg}
               alt="Modern equipment floor at M.K Fitness Club"
               loading="lazy"
               width={1440}
@@ -63,7 +39,7 @@ export function About() {
             </div>
           </div>
 
-          {/* Right side - Grid with images */}
+          {/* Right side - Grid with trainers.png for all items */}
           <div data-reveal="right" className="grid gap-3 sm:grid-cols-2">
             {WHY_US.map((item, i) => (
               <div
@@ -74,7 +50,7 @@ export function About() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                   <img
-                    src={imageMap[item]}
+                    src={trainersImg}
                     alt={item}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
