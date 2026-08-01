@@ -1,3 +1,17 @@
+// data/site.ts
+
+// Import your images
+import trainersImg from "@/assets/trainers.jpg";
+import equipmentImg from "@/assets/equipment.jpg";
+import yogaHallImg from "@/assets/yoga-hall.jpg";
+import strengthImg from "@/assets/strength-training.jpg";
+import cardioImg from "@/assets/cardio-zone.jpg";
+import functionalImg from "@/assets/functional-training.jpg";
+import personalTrainingImg from "@/assets/personal-training.jpg";
+import nutritionImg from "@/assets/nutrition-guidance.jpg";
+import friendlyImg from "@/assets/friendly-environment.jpg";
+import affordableImg from "@/assets/affordable-membership.jpg";
+
 export const BRAND = "M.K Fitness Club";
 
 export const PHONES = ["8698967644", "9689167644"];
@@ -15,60 +29,59 @@ export const NAV = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-// data/site.ts
-
 export const WHY_US = [
   {
     title: "Certified Trainers",
     description: "Expert guidance from certified professionals",
-    image: "src/assets/trainers.png" // Add your image paths
+    image: trainersImg
   },
   {
     title: "Modern Equipment",
     description: "State-of-the-art fitness equipment",
-    image: "/images/equipment.jpg"
+    image: equipmentImg
   },
   {
     title: "Separate Yoga Hall",
     description: "Dedicated space for yoga and mobility",
-    image: "/images/yoga-hall.jpg"
+    image: yogaHallImg
   },
   {
     title: "Strength Training",
     description: "Full free-weight zone with racks and plates",
-    image: "/images/strength-training.jpg"
+    image: strengthImg
   },
   {
     title: "Cardio Zone",
     description: "Treadmills, cross trainers, bikes and rowers",
-    image: "/images/cardio-zone.jpg"
+    image: cardioImg
   },
   {
     title: "Functional Training",
     description: "Functional turf, ropes, kettlebells and sleds",
-    image: "/images/functional-training.jpg"
+    image: functionalImg
   },
   {
     title: "Personal Training",
     description: "One-on-one sessions with certified coaches",
-    image: "/images/personal-training.jpg"
+    image: personalTrainingImg
   },
   {
     title: "Nutrition Guidance",
     description: "Personalised diet plans and nutrition advice",
-    image: "/images/nutrition-guidance.jpg"
+    image: nutritionImg
   },
   {
     title: "Friendly Environment",
     description: "Join a motivating and supportive community",
-    image: "/images/friendly-environment.jpg"
+    image: friendlyImg
   },
   {
     title: "Affordable Membership",
     description: "Premium facilities at budget-friendly rates",
-    image: "/images/affordable-membership.jpg"
+    image: affordableImg
   },
 ];
+
 
 export const FEATURES = [
   { icon: "Clock", title: "24 Hours Open", desc: "Punawale branch never sleeps — train on your schedule." },
