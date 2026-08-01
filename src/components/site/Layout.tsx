@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { BRAND, NAV, PHONES, WHATSAPP, BRANCHES } from "@/data/site";
 import { useScrollReveal } from "@/hooks/use-scroll-fx";
+import logo from "@/assets/logo.png"; // Import the logo
 
 function ScrollProgress() {
   const [p, setP] = useState(0);
@@ -77,21 +78,21 @@ function Navbar() {
       }`}
     >
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 lg:px-8">
-      <Link to="/" className="flex min-w-0 items-center gap-3">
-  <img
-    src="/src/assets/logo.png"
-    alt="MK Fitness Club Logo"
-    className="h-11 w-11 shrink-0 rounded-2xl object-cover"
-  />
-  <span className="min-w-0">
-    <span className="block truncate font-display text-xl leading-none tracking-wide">
-      M.K FITNESS CLUB
-    </span>
-    <span className="block truncate text-[11px] tracking-[0.3em] text-muted-foreground">
-      PUNAWALE · MARUNJI
-    </span>
-  </span>
-</Link>
+        <Link to="/" className="flex min-w-0 items-center gap-3">
+          <img
+            src={logo}
+            alt="MK Fitness Club Logo"
+            className="h-11 w-11 shrink-0 rounded-2xl object-cover"
+          />
+          <span className="min-w-0">
+            <span className="block truncate font-display text-xl leading-none tracking-wide">
+              M.K FITNESS CLUB
+            </span>
+            <span className="block truncate text-[11px] tracking-[0.3em] text-muted-foreground">
+              PUNAWALE · MARUNJI
+            </span>
+          </span>
+        </Link>
 
         <div className="hidden items-center gap-1 xl:flex">
           {NAV.map((item) => (
