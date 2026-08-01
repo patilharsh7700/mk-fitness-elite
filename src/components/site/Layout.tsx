@@ -77,7 +77,7 @@ function Navbar() {
       }`}
     >
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 lg:px-8">
-       <Link to="/" className="flex min-w-0 items-center gap-3">
+      <Link to="/" className="flex min-w-0 items-center gap-3">
   <img
     src="/src/assets/logo.png"
     alt="MK Fitness Club Logo"
