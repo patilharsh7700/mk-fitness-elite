@@ -30,9 +30,8 @@ export function PersonalTraining() {
           <h2 className="mt-5 text-5xl leading-[0.92] lg:text-6xl">
             ONE COACH. ONE PLAN. <span className="text-gradient">ONE RESULT.</span>
           </h2>
-          <p className="mt-5 text-muted-foreground">
-            Your body, your schedule, your goals. Our certified personal trainers build a workout
-            and diet protocol around you and track it week after week until the result shows.
+          <p className="mt-5 text-lg text-muted-foreground">
+            A certified coach, a custom workout and diet plan — tracked weekly until results show.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {TRAINING_GOALS.map((g) => (
