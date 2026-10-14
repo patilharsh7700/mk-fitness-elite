@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Features } from "@/components/sections/Features";
 import { Stats } from "@/components/sections/Stats";
+import { VideoShowcase } from "@/components/sections/VideoShowcase";
 import { Membership } from "@/components/sections/Membership";
 import { PersonalTraining } from "@/components/sections/PersonalTraining";
 import { Gallery } from "@/components/sections/Gallery";
