@@ -125,16 +125,16 @@ function Navbar() {
 
       {/* Updated Mobile Dropdown with Dark Background */}
       {open && (
-        <div className="mx-4 mt-3 rounded-3xl bg-black/90 backdrop-blur-xl border border-white/10 shadow-2xl xl:hidden">
+        <div className="mx-4 mt-3 rounded-3xl border border-border bg-background/95 shadow-2xl backdrop-blur-xl xl:hidden">
           <div className="grid gap-1 p-4">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
                 className={`rounded-xl px-4 py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-200 ${
-                  path === item.to 
-                    ? "bg-primary/20 text-primary" 
-                    : "text-white/90 hover:bg-white/10"
+                  path === item.to
+                    ? "bg-primary/20 text-primary"
+                    : "text-foreground/90 hover:bg-muted"
                 }`}
               >
                 {item.label}

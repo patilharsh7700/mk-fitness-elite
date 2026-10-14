@@ -73,11 +73,25 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
+      <div className="absolute bottom-24 left-1/2 hidden -translate-x-1/2 text-center sm:block">
         <div className="mx-auto grid h-11 w-7 place-items-start rounded-full border border-border pt-2">
           <span className="animate-scroll-dot h-2 w-2 rounded-full bg-primary" />
         </div>
         <ChevronDown className="mx-auto mt-1 h-4 w-4 text-muted-foreground" />
+      </div>
+
+      <div className="absolute inset-x-0 bottom-0 overflow-hidden border-y border-primary/30 bg-primary/10 py-4 backdrop-blur">
+        <div className="animate-marquee flex w-max gap-10 whitespace-nowrap font-display text-2xl tracking-widest">
+          {Array.from({ length: 2 }).flatMap((_, k) =>
+            ["24/7 Open", "Certified Trainers", "Yoga Hall", "CrossFit", "Cardio Zone", "Personal Training", "4.6★ Google"].map(
+              (t) => (
+                <span key={`${k}-${t}`} className="flex items-center gap-10">
+                  {t} <span className="text-primary">✦</span>
+                </span>
+              ),
+            ),
+          )}
+        </div>
       </div>
     </section>
   );
